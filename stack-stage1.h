@@ -12,31 +12,43 @@
  * on an empty stack results in undefined behavior (possibly crashing your
  * program)!
  *
- * Author: Your Name
+ * Author: Noah Braunfeld
  */
 
 #ifndef _STACK_H
 #define _STACK_H
 
-#include <cstddef> // for size_t
-#include <string>  // for stage 1
+#include <cstddef>  // for size_t
+#include <string>   // for stage 1
 
 using namespace std;
 
+// const size_t _MAX_SIZE = 4;
+
 class stack {
-  public:
-    string top(); // non-inline, implemented in stack-stage1.cpp
+ public:
+  string top();  // non-inline, implemented in stack-stage1.cpp
 
-    // inline definitions, doing nothing at the moment
-    void push(const string &) { return; }
-    void pop() { return; }
-    size_t size() { return 0; }
-    bool is_empty() { return true; }
+  // inline definitions, doing nothing at the moment
+  void push(const string& elem);
+  void pop();
+  size_t size();
+  bool is_empty();
 
-    stack() { ; }
+  stack() {
+    _num_elems = 0;
+    _capacity = 1;
+    _data = new string[_capacity];
+  };
 
-  private:
-    string _data[4];
+  ~stack() { delete[] _data; };
+
+ private:
+  void _reallocate();
+
+  size_t _capacity;
+  size_t _num_elems;
+  string* _data;
 };
 
 #endif

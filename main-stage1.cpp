@@ -14,7 +14,17 @@
 using namespace std;
 
 int main() {
-    // You can use this main() to run your own analysis or initial testing code.
-    cout << "If you are seeing this, you have successfully run main!" << endl;
-    return 0;
+  // You can use this main() to run your own analysis or initial testing code.
+  cout << "If you are seeing this, you have successfully run main!" << endl;
+
+  stack s;
+  s.push("hello");
+  s.push("two");
+  s.push("three");
+
+  while (!s.is_empty()) {
+    //cout << s.top() << endl;
+    s.pop();
+  }
+  return 0;
 }

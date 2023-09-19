@@ -8,6 +8,7 @@
  */
 
 #include <iostream>
+#include <string>
 
 #include "stack-stage3.h"
 
@@ -16,5 +17,9 @@ using namespace std;
 int main() {
     // You can use this main() to run your own analysis or initial testing code.
     cout << "If you are seeing this, you have successfully run main!" << endl;
+
+    stack<string> s;
+    stack<string> q = s;
+
     return 0;
 }
