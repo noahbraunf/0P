@@ -1,3 +1,4 @@
+# * DO NOT PLAGIARIZE FOR EDUCATIONAL PURPOSES ONLY *
 # Project 0P-Stack
 
 This document is written in Markdown.  If you are not familiar with markdown and/or would like to view a more "human readable" version in VS Code, look for a button in the upper right corner that says "Open Preview to the Side" when hovered over.
